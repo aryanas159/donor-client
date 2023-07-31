@@ -2,54 +2,10 @@ import AppMap from "../components/AppMap";
 import { useState, useRef } from "react";
 import { Box } from "@mui/material";
 import { grey } from "@mui/material/colors";
-import { Select, FormControl, MenuItem, InputLabel, Button } from "@mui/material";
-import axios from "axios"
-import UserCard from "../components/UserCard";
+import axios from "axios";
+import SelectBloodType from "../components/SelectBloodType";
 
-export const SelectBloodType = ({handleSearch, bloodType, setBloodType, results}) => {
-	
-	return (
-		<>
-			<FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-			<InputLabel id="demo-simple-select-label">Blood Type</InputLabel>
-			<Select
-				labelId="demo-simple-select-label"
-				id="demo-simple-select"
-				value={bloodType}
-				label="Blood Type"
-				onChange={(e) => setBloodType(e.target.value)}
-				// variant="standard"
-			>
-				<MenuItem value={"A"}>A+</MenuItem>
-				<MenuItem value={"A-"}>A-</MenuItem>
-				<MenuItem value={"B"}>B+</MenuItem>
-				<MenuItem value={"B-"}>B-</MenuItem>
-				<MenuItem value={"AB"}>AB+</MenuItem>
-				<MenuItem value={"AB-"}>AB-</MenuItem>
-				<MenuItem value={"O"}>O+</MenuItem>
-				<MenuItem value={"O-"}>O-</MenuItem>
-			</Select>
-			<Button variant="contained" style={{margin: "24px 4px"}} onClick={handleSearch}>
-				Search for donors
-			</Button>
-		</FormControl>
-		<Box display="flex"flexDirection="column" gap={2} overflow="scroll">
-			{!!results.length && (
-				results.map(({fullName, age, bloodGroup, distance, gender, isDonating}) => (
-					<UserCard 
-						fullName={fullName}
-						age={age}
-						bloodGroup={bloodGroup}
-						distance={distance}
-						gender={gender}
-						isDonating={isDonating}
-					/>
-				))
-			)}
-		</Box>
-		</>
-	);
-};
+
 const LandingPage = () => {
 	let initial = {
 		latitude: 28.6448,
@@ -61,13 +17,15 @@ const LandingPage = () => {
 	const [newPlace, setNewPlace] = useState(null);
 	const [viewport, setViewport] = useState(initial);
 	const [bloodType, setBloodType] = useState(null);
-	const [results, setResults] = useState([])
+	const [results, setResults] = useState([]);
 
 	const mapRef = useRef();
 	const handleSearch = async () => {
-		const res = await axios.get(`/donor/closestDonors?lat=${newPlace?.lat}&long=${newPlace.lng}&bloodType=${bloodType}`)
-		setResults(res?.data?.sortedListOfDonors)
-	}
+		const res = await axios.get(
+			`/donor/closestDonors?lat=${newPlace?.lat}&long=${newPlace.lng}&bloodType=${bloodType}`
+		);
+		setResults(res?.data?.sortedListOfDonors);
+	};
 	return (
 		<Box
 			display={"flex"}
@@ -84,6 +42,13 @@ const LandingPage = () => {
 				backgroundColor={grey[200]}
 				borderRadius={6}
 			>
+				<SelectBloodType
+					handleSearch={handleSearch}
+					bloodType={bloodType}
+					setBloodType={setBloodType}
+					results={results}
+				/>
+
 				<AppMap
 					mapRef={mapRef}
 					setNewPlace={setNewPlace}
@@ -91,7 +56,7 @@ const LandingPage = () => {
 					viewport={viewport}
 					setViewport={setViewport}
 					setResults={setResults}
-					extraComponent={<SelectBloodType handleSearch={handleSearch} bloodType={bloodType} setBloodType={setBloodType} results={results}/>}
+					donors={results}
 				/>
 			</Box>
 		</Box>
