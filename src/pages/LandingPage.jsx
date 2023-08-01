@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import axios from "axios";
 import SelectBloodType from "../components/SelectBloodType";
-
+import Navbar from "../components/Navbar";
 
 const LandingPage = () => {
 	let initial = {
@@ -33,12 +33,14 @@ const LandingPage = () => {
 			alignItems={"center"}
 			justifyContent={"center"}
 		>
+			<Navbar />
 			<Box
 				width="70vw"
 				height="70vh"
 				display={"flex"}
 				gap={4}
 				p={3}
+				mt={3}
 				backgroundColor={grey[200]}
 				borderRadius={6}
 			>

@@ -3,11 +3,7 @@ import { Formik, Field, ErrorMessage } from "formik";
 import FormTextField from "../components/FormTextField";
 import AppMap from "./AppMap";
 import { useRef, useState } from "react";
-import {
-	Stack,
-	Button,
-	Box,
-} from "@mui/material";
+import { Stack, Button, Box } from "@mui/material";
 import axios from "axios";
 
 const DonorSchema = yup.object({
@@ -44,7 +40,7 @@ const initialValues = {
 	address: "",
 };
 
-const DonorRegisterForm = () => {
+const DonorRegisterForm = ({setSuccess, setFullName}) => {
 	const mapRef = useRef(null);
 	let initial = {
 		latitude: 28.6448,
@@ -55,17 +51,25 @@ const DonorRegisterForm = () => {
 	};
 	const [newPlace, setNewPlace] = useState(null);
 	const [viewport, setViewport] = useState(initial);
-
+	const [isLoading, setIsLoading] = useState(false);
+	const [errMsg, setErrMsg] = useState("")
 	const handleSubmit = async (values) => {
-		const location = {
-			latitude: newPlace?.lat,
-			longitude: newPlace?.lng
+		try {
+			setIsLoading(true);
+			const location = {
+				latitude: newPlace?.lat,
+				longitude: newPlace?.lng,
+			};
+			values.location = location;
+			const res = await axios.post("/donor/register", { ...values });
+			setIsLoading(false)
+			setErrMsg("")
+			setSuccess(true)
+			setFullName(values.fullName)
+		} catch (error) {
+			setIsLoading(false)
+			setErrMsg(error?.response?.data?.message || error.message)
 		}
-		values.location = location
-		console.log(location)
-		console.log(values);
-		const res = await axios.post('/donor/register', {...values})
-		console.log(res)
 	};
 
 	return (
@@ -83,12 +87,16 @@ const DonorRegisterForm = () => {
 				handleChange,
 				setFieldValue,
 			}) => (
-				<form
-					onSubmit={handleSubmit}
-					style={{ width: "70%" }}
-					encType="multipart/form-data"
-				>
-					<Stack direction="column" spacing={2}>
+				<form onSubmit={handleSubmit} encType="multipart/form-data">
+					<Stack
+						direction="column"
+						spacing={2}
+						sx={{
+							display: "flex",
+							flexDirection: "column",
+							alignItems: "center",
+						}}
+					>
 						<FormTextField
 							id="fullName"
 							label="Full name"
@@ -98,7 +106,7 @@ const DonorRegisterForm = () => {
 							touched={touched}
 							errors={errors}
 						/>
-						<Box display="flex" gap={2}>
+						<Box display="flex" gap={2} width="100%">
 							<FormTextField
 								id="age"
 								label="Age"
@@ -137,39 +145,57 @@ const DonorRegisterForm = () => {
 							touched={touched}
 							errors={errors}
 						/>
-						<Box display="flex" gap={2}>
-							<Field
-								component="select"
-								id="bloodGroup"
-								value={values.bloodGroup}
-								name="bloodGroup"
-							>
-								<option disabled selected value="">
-									Blood Group
-								</option>
-								<option value={"A"}>A+</option>
-								<option value={"A-"}>A-</option>
-								<option value={"B"}>B+</option>
-								<option value={"B-"}>B-</option>
-								<option value={"AB"}>AB+</option>
-								<option value={"AB-"}>AB-</option>
-								<option value={"O"}>O+</option>
-								<option value={"O-"}>O-</option>
-							</Field>
-							<ErrorMessage name="bloodGroup" />
-							<Field
-								component="select"
-								name="gender"
-								id="gender"
-								value={values.gender}
-							>
-								<option disabled selected value="">
-									Gender
-								</option>
-								<option value={"Male"}>Male</option>
-								<option value={"Female"}>Female</option>
-							</Field>
-							<ErrorMessage name="gender" />
+						<Box display="flex" gap={2} width="100%">
+							<Box display="flex" flexDirection="column">
+								<Field
+									component="select"
+									id="bloodGroup"
+									value={values.bloodGroup}
+									name="bloodGroup"
+									style={{ padding: "4px" }}
+								>
+									<option disabled selected value="">
+										Blood Group
+									</option>
+									<option value={"A"}>A+</option>
+									<option value={"A-"}>A-</option>
+									<option value={"B"}>B+</option>
+									<option value={"B-"}>B-</option>
+									<option value={"AB"}>AB+</option>
+									<option value={"AB-"}>AB-</option>
+									<option value={"O"}>O+</option>
+									<option value={"O-"}>O-</option>
+								</Field>
+								<ErrorMessage name="bloodGroup">
+									{(msg) => (
+										<div style={{ color: "red", fontSize: "0.8rem" }}>
+											{msg}
+										</div>
+									)}
+								</ErrorMessage>
+							</Box>
+							<Box display="flex" flexDirection="column">
+								<Field
+									component="select"
+									name="gender"
+									id="gender"
+									value={values.gender}
+									style={{ padding: "4px" }}
+								>
+									<option disabled selected value="">
+										Gender
+									</option>
+									<option value={"Male"}>Male</option>
+									<option value={"Female"}>Female</option>
+								</Field>
+								<ErrorMessage name="gender">
+									{(msg) => (
+										<div style={{ color: "red", fontSize: "0.8rem" }}>
+											{msg}
+										</div>
+									)}
+								</ErrorMessage>
+							</Box>
 						</Box>
 						<FormTextField
 							id="address"
@@ -181,25 +207,29 @@ const DonorRegisterForm = () => {
 							errors={errors}
 						/>
 						<Box
-                            width="50vw"
-                            height="50vh"
-                            display={"flex"}
-                            gap={4}
-                            p={3}
-                            borderRadius={6}
-                        >
-                        <AppMap
-                            mapRef={mapRef}
-                            setNewPlace={setNewPlace}
-                            newPlace={newPlace}
-                            viewport={viewport}
-                            setViewport={setViewport}
-                        />
-                        </Box>
+							width="40vw"
+							height="40vh"
+							display={"flex"}
+							gap={4}
+							p={3}
+							borderRadius={6}
+						>
+							<AppMap
+								mapRef={mapRef}
+								setNewPlace={setNewPlace}
+								newPlace={newPlace}
+								viewport={viewport}
+								setViewport={setViewport}
+							/>
+						</Box>
+						<Box color="red">
+							{errMsg}
+						</Box>
 					</Stack>
 					<Button
 						type="submit"
 						variant="contained"
+						disabled={isLoading}
 						sx={{
 							width: { xs: "150px", sm: "200px" },
 							marginTop: "20px",
