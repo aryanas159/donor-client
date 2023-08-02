@@ -40,7 +40,7 @@ const initialValues = {
 	address: "",
 };
 
-const DonorRegisterForm = ({setSuccess, setFullName}) => {
+const DonorRegisterForm = ({ setSuccess, setFullName }) => {
 	const mapRef = useRef(null);
 	let initial = {
 		latitude: 28.6448,
@@ -52,9 +52,12 @@ const DonorRegisterForm = ({setSuccess, setFullName}) => {
 	const [newPlace, setNewPlace] = useState(null);
 	const [viewport, setViewport] = useState(initial);
 	const [isLoading, setIsLoading] = useState(false);
-	const [errMsg, setErrMsg] = useState("")
+	const [errMsg, setErrMsg] = useState("");
 	const handleSubmit = async (values) => {
 		try {
+			if (!newPlace) {
+				return alert("Please enter a location")
+			}
 			setIsLoading(true);
 			const location = {
 				latitude: newPlace?.lat,
@@ -62,13 +65,13 @@ const DonorRegisterForm = ({setSuccess, setFullName}) => {
 			};
 			values.location = location;
 			const res = await axios.post("/donor/register", { ...values });
-			setIsLoading(false)
-			setErrMsg("")
-			setSuccess(true)
-			setFullName(values.fullName)
+			setIsLoading(false);
+			setErrMsg("");
+			setSuccess(true);
+			setFullName(values.fullName);
 		} catch (error) {
-			setIsLoading(false)
-			setErrMsg(error?.response?.data?.message || error.message)
+			setIsLoading(false);
+			setErrMsg(error?.response?.data?.message || error.message);
 		}
 	};
 
@@ -115,7 +118,7 @@ const DonorRegisterForm = ({setSuccess, setFullName}) => {
 								handleBlur={handleBlur}
 								touched={touched}
 								errors={errors}
-								isNumber={true}
+								type="number"
 							/>
 							<FormTextField
 								id="phoneNo"
@@ -135,6 +138,7 @@ const DonorRegisterForm = ({setSuccess, setFullName}) => {
 							handleBlur={handleBlur}
 							touched={touched}
 							errors={errors}
+							type="email"
 						/>
 						<FormTextField
 							id="password"
@@ -144,6 +148,7 @@ const DonorRegisterForm = ({setSuccess, setFullName}) => {
 							handleBlur={handleBlur}
 							touched={touched}
 							errors={errors}
+							type="password"
 						/>
 						<Box display="flex" gap={2} width="100%">
 							<Box display="flex" flexDirection="column">
@@ -152,7 +157,11 @@ const DonorRegisterForm = ({setSuccess, setFullName}) => {
 									id="bloodGroup"
 									value={values.bloodGroup}
 									name="bloodGroup"
-									style={{ padding: "4px" }}
+									style={{
+										padding: "4px",
+										background: "transparent",
+										color: "#fff",
+									}}
 								>
 									<option disabled selected value="">
 										Blood Group
@@ -180,7 +189,11 @@ const DonorRegisterForm = ({setSuccess, setFullName}) => {
 									name="gender"
 									id="gender"
 									value={values.gender}
-									style={{ padding: "4px" }}
+									style={{
+										padding: "4px",
+										background: "transparent",
+										color: "#fff",
+									}}
 								>
 									<option disabled selected value="">
 										Gender
@@ -207,8 +220,8 @@ const DonorRegisterForm = ({setSuccess, setFullName}) => {
 							errors={errors}
 						/>
 						<Box
-							width="40vw"
-							height="40vh"
+							width="35vw"
+							height="45vh"
 							display={"flex"}
 							gap={4}
 							p={3}
@@ -222,9 +235,7 @@ const DonorRegisterForm = ({setSuccess, setFullName}) => {
 								setViewport={setViewport}
 							/>
 						</Box>
-						<Box color="red">
-							{errMsg}
-						</Box>
+						<Box color="red">{errMsg}</Box>
 					</Stack>
 					<Button
 						type="submit"

@@ -1,9 +1,9 @@
 import Map, { Marker } from "react-map-gl";
 import { useEffect, useState } from "react";
-import { TextField, Button, Box, Menu, MenuItem } from "@mui/material";
+import { TextField, Button, Box, Menu, Typography } from "@mui/material";
 import axios from "axios";
 import Place from "./Place";
-import BloodDrop from "../assets/blood-drop.png"
+import BloodDrop from "../assets/blood-drop.png";
 const AppMap = ({
 	mapRef,
 	setNewPlace,
@@ -17,6 +17,8 @@ const AppMap = ({
 	const [anchorEl, setAnchorEl] = useState(null);
 	const open = Boolean(anchorEl);
 	const [textFieldElement, setTextFieldElement] = useState(null);
+	const [isLocationAllowed, setIsLocationAllowed] = useState(true);
+
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
@@ -50,6 +52,7 @@ const AppMap = ({
 		});
 	};
 	const error = (e) => {
+		setIsLocationAllowed(false);
 		console.log(e);
 	};
 	const getCurrentLocation = () => {
@@ -61,7 +64,7 @@ const AppMap = ({
 	useEffect(getCurrentLocation, []);
 	return (
 		<Box display="flex" flexDirection="column" gap={2} flex={3}>
-			<Box display={"flex"} gap={2}>
+			<Box display={"flex"} gap={2} alignItems="center">
 				<TextField
 					size="small"
 					value={search}
@@ -73,6 +76,19 @@ const AppMap = ({
 				<Button variant="contained" onClick={() => getResults(search)}>
 					search
 				</Button>
+				<Box display="flex" flexDirection="column">
+					<Typography sx={{ fontSize: "0.8rem", fontWeight: "300" }}>
+						* Double tap to mark location
+					</Typography>
+					{!isLocationAllowed && (
+						<Typography
+							color="error"
+							sx={{ fontSize: "0.8rem", fontWeight: "300" }}
+						>
+							*Location has been disabled
+						</Typography>
+					)}
+				</Box>
 			</Box>
 			{!!searchResults.length && (
 				<Menu
@@ -107,7 +123,7 @@ const AppMap = ({
 				mapboxAccessToken={import.meta.env.VITE_MAPBOX_API_KEY}
 				{...viewport}
 				onMove={(evt) => setViewport(evt.viewState)}
-				mapStyle="mapbox://styles/aryanas159/clkp390m9003n01o24pja3bhv"
+				mapStyle="mapbox://styles/aryanas159/clktkkbje00td01qy50hgge98"
 				onDblClick={handleAddClick}
 				transitionDuration="200"
 				attributionControl={true}
@@ -126,8 +142,11 @@ const AppMap = ({
 				) : null}
 				{!!donors?.length &&
 					donors.map((donor) => (
-						<Marker latitude={donor?.location?.latitude} longitude={donor?.location?.longitude}>
-							<img src={BloodDrop} height={60}/>
+						<Marker
+							latitude={donor?.location?.latitude}
+							longitude={donor?.location?.longitude}
+						>
+							<img src={BloodDrop} height={60} />
 						</Marker>
 					))}
 			</Map>

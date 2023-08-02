@@ -1,11 +1,21 @@
-import { FormControl, InputLabel, Select, MenuItem, Button, Box } from "@mui/material";
+import {
+	FormControl,
+	InputLabel,
+	Select,
+	MenuItem,
+	Button,
+	Box,
+	Typography,
+} from "@mui/material";
 import UserCard from "./UserCard";
+import { CircularProgress } from "@mui/material";
 
 const SelectBloodType = ({
 	handleSearch,
 	bloodType,
 	setBloodType,
 	results,
+	isLoading,
 }) => {
 	return (
 		<Box display="flex" flexDirection="column" gap={2} flex={1}>
@@ -30,26 +40,43 @@ const SelectBloodType = ({
 				</Select>
 				<Button
 					variant="contained"
-					style={{ margin: "24px 4px" }}
+					style={{ margin: "24px 4px 0px 4px" }}
 					onClick={handleSearch}
 				>
 					Search for donors
+					{isLoading && (
+						<CircularProgress
+							size={20}
+							sx={{ color: "#fff", marginLeft: "10px" }}
+						/>
+					)}
 				</Button>
 			</FormControl>
-			<Box display="flex" flexDirection="column" gap={2} overflowY="scroll">
-				{!!results.length &&
-					results.map(
-						({ fullName, age, bloodGroup, distance, gender, isDonating }) => (
-							<UserCard
-								fullName={fullName}
-								age={age}
-								bloodGroup={bloodGroup}
-								distance={distance}
-								gender={gender}
-								isDonating={isDonating}
-							/>
-						)
-					)}
+			{results && (
+				<Typography>{results?.length} blood donors found</Typography>
+			)}
+			<Box
+				display="flex"
+				flexDirection="column"
+				gap={2}
+				overflow="hidden scroll"
+			>
+				{!!results?.length && (
+					<>
+						{results.map(
+							({ fullName, age, bloodGroup, distance, gender, isDonating }) => (
+								<UserCard
+									fullName={fullName}
+									age={age}
+									bloodGroup={bloodGroup}
+									distance={distance}
+									gender={gender}
+									isDonating={isDonating}
+								/>
+							)
+						)}
+					</>
+				)}
 			</Box>
 		</Box>
 	);

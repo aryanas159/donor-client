@@ -1,13 +1,13 @@
 import { TextField } from "@mui/material";
 
-const FormTextField = ({id, label, value, handleChange, handleBlur ,touched, errors, isNumber}) => {
+const FormTextField = ({id, label, value, handleChange, handleBlur ,touched, errors, type}) => {
 	return (
 		<TextField
 			id={id}
 			variant="standard"
 			label={label}
 			value={value}
-            type={isNumber ? "number" : "text"}
+            type={type ? type : "text"}
 			onChange={handleChange}
 			onBlur={handleBlur}
 			error={touched[id] && errors[id]}
