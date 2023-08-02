@@ -1,12 +1,13 @@
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-
+import logo from "../assets/blood-icon.png"
 const Navbar = () => {
     const navigate = useNavigate()
 	return (
 		<AppBar position="static">
-			<Toolbar style={{backgroundColor: "#fff"}}>
-				<Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#000" }}>
+			<Toolbar style={{backgroundColor: "#000"}}>
+				<img src={logo} alt="Donor" height="50px"/>
+				<Typography variant="h5" component="div" sx={{ flexGrow: 1, ml: "8px"}}>
 					DONOR
 				</Typography>
 				<Box display="flex" gap={2}>

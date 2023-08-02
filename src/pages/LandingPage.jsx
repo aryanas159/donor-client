@@ -5,6 +5,7 @@ import { grey } from "@mui/material/colors";
 import axios from "axios";
 import SelectBloodType from "../components/SelectBloodType";
 import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
 
 const LandingPage = () => {
 	let initial = {
@@ -27,13 +28,9 @@ const LandingPage = () => {
 		setResults(res?.data?.sortedListOfDonors);
 	};
 	return (
-		<Box
-			display={"flex"}
-			flexDirection={"column"}
-			alignItems={"center"}
-			justifyContent={"center"}
-		>
+		<Box display="flex" flexDirection="column"  alignItems="center" backgroundColor="#000" pb={4} >
 			<Navbar />
+			<Hero />
 			<Box
 				width="70vw"
 				height="70vh"
