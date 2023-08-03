@@ -1,6 +1,7 @@
 import LandingPage from "./pages/LandingPage";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import DonorInfo from "./pages/DonorInfo";
 import { CssBaseline } from "@mui/material";
 import "mapbox-gl/dist/mapbox-gl.css";
 import axios from "axios";
@@ -18,6 +19,7 @@ function App() {
 						<Route path="/" element={<LandingPage />} />
 						<Route path="/register" element={<Register />} />
 						<Route path="/login" element={<Login />} />
+						<Route path="/:id" element={<DonorInfo />} />
 					</Routes>
 				</BrowserRouter>
 			</CssBaseline>

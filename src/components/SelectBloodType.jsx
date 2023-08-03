@@ -64,8 +64,9 @@ const SelectBloodType = ({
 				{!!results?.length && (
 					<>
 						{results.map(
-							({ fullName, age, bloodGroup, distance, gender, isDonating }) => (
+							({ _id, fullName, age, bloodGroup, distance, gender, isDonating }) => (
 								<UserCard
+									donorId={_id}
 									fullName={fullName}
 									age={age}
 									bloodGroup={bloodGroup}

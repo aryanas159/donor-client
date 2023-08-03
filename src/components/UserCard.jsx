@@ -1,17 +1,19 @@
 import { Avatar, Box, Stack, Typography } from "@mui/material"
 import DonorIcon from '../assets/donor.png'
 import { useEffect, useState } from "react"
-const UserCard = ({fullName, age, bloodGroup, distance, gender, isDonating}) => {
+import { useNavigate } from "react-router-dom"
+const UserCard = ({donorId, fullName, age, bloodGroup, distance, gender, isDonating}) => {
+    const navigate = useNavigate()
     const [newBloodGroup, setNewBloodGroup] = useState(bloodGroup)
     const formatBloodGroup = () => {
         if (['A', 'B', 'AB', 'O'].includes(bloodGroup)) {
-            setNewBloodGroup(prev => prev + "+")
+            console.log(bloodGroup)
+            setNewBloodGroup(bloodGroup + "+")
         }
-        console.log({bloodGroup})
     }
     useEffect(formatBloodGroup, [bloodGroup])
     return (
-        <Box display="flex" gap={1} borderRadius={2} p={1}>
+        <Box display="flex" gap={1} borderRadius={2} p={1} sx={{cursor: "pointer"}} onClick={() => navigate(`/${donorId}?dist=${Number(distance).toFixed(1)}`)}>
             <Avatar alt="donor" src={DonorIcon}/>
             <Stack>
                 <Typography variant="h5" fontSize={14}>{fullName}</Typography>
