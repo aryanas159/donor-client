@@ -3,6 +3,7 @@ import { Formik, Field, ErrorMessage } from "formik";
 import FormTextField from "./FormTextField";
 import { Stack, Button } from "@mui/material";
 import axios from "axios";
+import { useState } from "react";
 const LoginSchema = yup.object({
 	email: yup
 		.string()
@@ -18,15 +19,19 @@ const initialValues = {
 	password: "",
 };
 
-const LoginForm = ({ setIsDonor, setToken }) => {
+const LoginForm = ({ setIsDonor, setToken, setDonorName }) => {
+	const [isLoading, setIsLoading] = useState(false);
 	const handleSubmit = async (values) => {
 		try {
+			setIsLoading(true);
 			const res = await axios.post("/donor/login", { ...values });
+			setDonorName(res?.data?.donor?.fullName)
 			setIsDonor(res?.data?.donor?.isDonating);
-            setToken(res?.data?.token)
-			console.log(res);
+			setToken(res?.data?.token);
+			setIsLoading(false);
 		} catch (error) {
-			console.log(error);
+			alert(error?.response?.data?.message || error.message);
+			setIsLoading(false);
 		}
 	};
 	return (
@@ -53,6 +58,7 @@ const LoginForm = ({ setIsDonor, setToken }) => {
 							id="email"
 							label="Email"
 							value={values.email}
+							type="email"
 							handleChange={handleChange}
 							handleBlur={handleBlur}
 							touched={touched}
@@ -62,6 +68,7 @@ const LoginForm = ({ setIsDonor, setToken }) => {
 							id="password"
 							label="Password"
 							value={values.password}
+							type="password"
 							handleChange={handleChange}
 							handleBlur={handleBlur}
 							touched={touched}
@@ -71,6 +78,7 @@ const LoginForm = ({ setIsDonor, setToken }) => {
 					<Button
 						type="submit"
 						variant="contained"
+						disabled={isLoading}
 						sx={{
 							width: { xs: "150px", sm: "200px" },
 							marginTop: "20px",
