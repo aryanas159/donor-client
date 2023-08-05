@@ -4,7 +4,7 @@ import { TextField, Button, Box, Menu, Typography } from "@mui/material";
 import axios from "axios";
 import Place from "./Place";
 import BloodDrop from "../assets/blood-drop.png";
-import {useMediaQuery} from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 
 const AppMap = ({
 	mapRef,
@@ -67,7 +67,7 @@ const AppMap = ({
 	useEffect(getCurrentLocation, []);
 	return (
 		<Box display="flex" flexDirection="column" gap={2} flex={3}>
-			<Box display={"flex"} gap={2} alignItems="center">
+			<Box display={"flex"} gap={2} alignItems="center" flexWrap="wrap">
 				<TextField
 					size="small"
 					value={search}
@@ -128,9 +128,14 @@ const AppMap = ({
 				onMove={(evt) => setViewport(evt.viewState)}
 				mapStyle="mapbox://styles/aryanas159/clktkkbje00td01qy50hgge98"
 				onDblClick={handleAddClick}
+				onTouchEnd={handleAddClick}
 				transitionDuration="200"
 				attributionControl={true}
-				style={isMobile ? { borderRadius: "12px", height: "60vh", width: "100%" } : { borderRadius: "12px"}}
+				style={
+					isMobile
+						? { borderRadius: "12px", height: "60vh", width: "100%" }
+						: { borderRadius: "12px" }
+				}
 			>
 				{newPlace ? (
 					<Marker
