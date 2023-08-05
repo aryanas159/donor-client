@@ -4,6 +4,7 @@ import FormTextField from "./FormTextField";
 import { Stack, Button } from "@mui/material";
 import axios from "axios";
 import { useState } from "react";
+import {useMediaQuery} from "@mui/material";
 const LoginSchema = yup.object({
 	email: yup
 		.string()
@@ -21,6 +22,7 @@ const initialValues = {
 
 const LoginForm = ({ setIsDonor, setToken, setDonorName }) => {
 	const [isLoading, setIsLoading] = useState(false);
+	const isMobile = useMediaQuery("(max-width: 600px)");
 	const handleSubmit = async (values) => {
 		try {
 			setIsLoading(true);
@@ -50,8 +52,8 @@ const LoginForm = ({ setIsDonor, setToken, setDonorName }) => {
 			}) => (
 				<form
 					onSubmit={handleSubmit}
-					style={{ width: "70%" }}
 					encType="multipart/form-data"
+					style={{width: isMobile ? "100%" : "70%"}}
 				>
 					<Stack direction="column" spacing={2}>
 						<FormTextField
