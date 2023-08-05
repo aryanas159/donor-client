@@ -25,12 +25,12 @@ const LandingPage = () => {
 		try {
 			setIsLoading(true);
 			if (!newPlace) {
-				setIsLoading(false)
-				return alert("Please enter a location")
+				setIsLoading(false);
+				return alert("Please enter a location");
 			}
 			if (!bloodType) {
-				setIsLoading(false)
-				return alert("Please choose a blood type")
+				setIsLoading(false);
+				return alert("Please choose a blood type");
 			}
 			const res = await axios.get(
 				`/donor/closestDonors?lat=${newPlace?.lat}&long=${newPlace.lng}&bloodType=${bloodType}`
@@ -38,9 +38,9 @@ const LandingPage = () => {
 			setResults(res?.data?.sortedListOfDonors);
 			setIsLoading(false);
 		} catch (error) {
-			setIsLoading(false)
-			alert(error.message)
-			console.log(error)
+			setIsLoading(false);
+			alert(error.message);
+			console.log(error);
 		}
 	};
 	return (
@@ -54,9 +54,12 @@ const LandingPage = () => {
 			<Navbar />
 			<Hero />
 			<Box
-				width="70vw"
-				height="70vh"
 				display={"flex"}
+				sx={{
+					flexDirection: { xs: "column", sm: "row" },
+					width: { xs: "90vw", sm: "70vw" },
+					minHeight: { xs: "90vh", sm: "70vh" },
+				}}
 				gap={4}
 				p={3}
 				mt={3}

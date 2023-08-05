@@ -4,6 +4,8 @@ import { TextField, Button, Box, Menu, Typography } from "@mui/material";
 import axios from "axios";
 import Place from "./Place";
 import BloodDrop from "../assets/blood-drop.png";
+import {useMediaQuery} from "@mui/material";
+
 const AppMap = ({
 	mapRef,
 	setNewPlace,
@@ -13,6 +15,7 @@ const AppMap = ({
 	donors,
 }) => {
 	const [search, setSearch] = useState("");
+	const isMobile = useMediaQuery("(max-width: 600px)");
 	const [searchResults, setSearchResults] = useState([]);
 	const [anchorEl, setAnchorEl] = useState(null);
 	const open = Boolean(anchorEl);
@@ -127,7 +130,7 @@ const AppMap = ({
 				onDblClick={handleAddClick}
 				transitionDuration="200"
 				attributionControl={true}
-				style={{ borderRadius: "12px" }}
+				style={isMobile ? { borderRadius: "12px", height: "60vh", width: "100%" } : { borderRadius: "12px"}}
 			>
 				{newPlace ? (
 					<Marker

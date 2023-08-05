@@ -59,6 +59,7 @@ const SelectBloodType = ({
 				display="flex"
 				flexDirection="column"
 				gap={2}
+				sx={{maxHeight: {xs: "50vh", sm: "40vh"}}}
 				overflow="hidden scroll"
 			>
 				{!!results?.length && (
