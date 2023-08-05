@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import axios from "axios";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useMediaQuery } from "@mui/material";
 function useQuery() {
 	const { search } = useLocation();
 
@@ -14,6 +15,8 @@ const DonorInfo = () => {
 	const { id } = useParams();
 	let query = useQuery();
 	const [donor, setDonor] = useState(null);
+	const isMobile = useMediaQuery("(max-width: 600px)");
+
 	const navigate = useNavigate();
 	const mapRef = useRef();
 	let initial = {
@@ -38,31 +41,34 @@ const DonorInfo = () => {
 	useEffect(getDonorInfo, [id]);
 	return (
 		<Box
-			display="grid"
+			display={isMobile ? "flex" : "grid"}
+			flexDirection="column"
+			gap={2}
 			gridTemplateColumns="1fr 1fr"
 			alignItems="center"
 			justifyContent="center"
 			minWidth="7vw"
 			minHeight="70vh"
+			p={2}
 		>
 			<Box
 				display="flex"
 				flexDirection="column"
-				width="100%"
-				height="100%"
+				width={isMobile ? "90vw" : "100%"}
+				height={isMobile ? "40vh" : "100%"}
 				alignItems="center"
 				justifyContent="center"
-                gap={2}
+				gap={2}
 			>
 				<Map
-                    ref={mapRef}
+					ref={mapRef}
 					mapboxAccessToken={import.meta.env.VITE_MAPBOX_API_KEY}
 					{...viewport}
 					onMove={(evt) => setViewport(evt.viewState)}
 					mapStyle="mapbox://styles/aryanas159/clktkkbje00td01qy50hgge98"
 					transitionDuration="200"
 					attributionControl={true}
-					style={{ borderRadius: "12px", width: "60%", height: "60%" }}
+					style={isMobile ? { borderRadius: "12px"} : { borderRadius: "12px", width: "60%", height: "60%" }}
 				>
 					{donor && (
 						<Marker
@@ -74,8 +80,8 @@ const DonorInfo = () => {
 				<Button
 					variant="contained"
 					onClick={() => {
-                        navigate("/");
-                        window.location.reload()
+						navigate("/");
+						window.location.reload();
 					}}
 				>
 					Back to Home

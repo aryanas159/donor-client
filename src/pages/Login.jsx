@@ -36,7 +36,7 @@ const Login = () => {
 					? { display: "flex", flexDirection: "column", gap: "48px" }
 					: { display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center" }
 			}
-			p={4}
+			p={isMobile ? 2 : 4}
 			
 			justifyContent="center"
 		>
