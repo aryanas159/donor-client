@@ -81,7 +81,7 @@ const AppMap = ({
 				</Button>
 				<Box display="flex" flexDirection="column">
 					<Typography sx={{ fontSize: "0.8rem", fontWeight: "300" }}>
-						* Double tap to mark location
+						{isMobile ? "* Tap to mark location" : "* Double tap to mark location"}
 					</Typography>
 					{!isLocationAllowed && (
 						<Typography

@@ -77,10 +77,22 @@ const Hero = () => {
 			</Box>
 			{isMobile && (
 				<Box display="flex" flexDirection="column" gap={2} mt={4}>
-					<Button variant="contained" onClick={() => navigate("/register")}>
+					<Button
+						variant="contained"
+						onClick={() => {
+							navigate("/register");
+							window.location.reload();
+						}}
+					>
 						Become a donor
 					</Button>
-					<Button variant="contained" onClick={() => navigate("/login")}>
+					<Button
+						variant="contained"
+						onClick={() => {
+							navigate("/login");
+							window.location.reload();
+						}}
+					>
 						Change donor status
 					</Button>
 				</Box>
