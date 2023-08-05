@@ -222,7 +222,7 @@ const DonorRegisterForm = ({ setSuccess, setFullName }) => {
 						/>
 						<Box
 							width={isMobile ? "90vw" : "35vw"}
-							height={isMobile ? "60vh" : "45vw"}
+							height={isMobile ? "60vh" : "50vh"}
 							display={"flex"}
 							gap={4}
 							p={isMobile ? 2 : 3}
