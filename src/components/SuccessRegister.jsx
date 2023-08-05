@@ -22,7 +22,7 @@ const SuccessRegister = ({ fullName }) => {
 				gap={4}
 				alignItems="center"
 				justifyContent="center"
-				sx={{ width: "70%" }}
+				sx={{ width: {xs: "100%", sm: "70%"} }}
 			>
 				<Typography variant="h3" align="center">
 					Thank you, <span style={{color: theme.palette.primary.main}}>{fullName}</span> for registering as a blood donor!

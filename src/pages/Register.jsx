@@ -7,23 +7,28 @@ import { useTheme } from "@mui/material";
 import person from "../assets/image3.png";
 import text from "../assets/text.png";
 import logo from "../assets/blood-icon.png";
+import { useMediaQuery } from "@mui/material";
 const Register = () => {
 	const [success, setSuccess] = useState(false);
 	const [fullName, setFullName] = useState("");
+	const isMobile = useMediaQuery("(max-width: 600px)");
 	const theme = useTheme();
 	return (
 		<Box display="flex" p={4} alignItems="center" justifyContent="center">
-			{
-			success ? (
+			{success ? (
 				<SuccessRegister fullName={fullName} />
 			) : (
 				<Box
 					display="grid"
-					gridTemplateColumns="1fr 1fr"
+					sx={
+						isMobile
+							? { gridTemplateRows: ".95fr 1fr" }
+							: { gridTemplateColumns: "1fr 1fr" }
+					}
 					gap={4}
-					p={4}
-					maxWidth="75vw"
-					border="1px solid #fff"
+					p={isMobile ? 0 : 4}
+					maxWidth={isMobile ? "100vw" : "75vw"}
+					border={isMobile ? "none" : "1px solid #fff"}
 				>
 					<Box
 						display="flex"
@@ -31,32 +36,33 @@ const Register = () => {
 						gap={2}
 						p={4}
 						alignItems="center"
+						height="100%"
 						position="relative"
 					>
 						<img
 							src={logo}
 							alt="bloodIcon"
-							width="100px"
-							style={{ position: "absolute", left: "5%", top: "5%" }}
+							width={isMobile ? "60px" : "100px"}
+							style={{ position: "absolute", left: "4%", top: "4%" }}
 						/>
 
 						<img
 							src={person}
 							alt="person"
-							width="300px"
+							width={isMobile ? "260px" : "300px"}
 							style={{ position: "absolute", right: "0px", top: "0px" }}
 						/>
 
 						<img
 							src={text}
 							alt="text"
-							width="250px"
+							width={isMobile ? "200px" : "250px"}
 							style={{ position: "absolute", left: "40px", top: "48%" }}
 						/>
 						<Box
 							sx={{
 								position: "absolute",
-								bottom: "8%",
+								bottom: {xs: "5%", sm: "8%"},
 							}}
 						>
 							<Typography
@@ -87,7 +93,7 @@ const Register = () => {
 							</Typography>
 						</Box>
 					</Box>
-					<Box display="flex" flex={1}>
+					<Box display="flex">
 						<DonorRegisterForm
 							setSuccess={setSuccess}
 							setFullName={setFullName}

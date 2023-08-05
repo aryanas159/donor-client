@@ -13,7 +13,7 @@ const FormTextField = ({id, label, value, handleChange, handleBlur ,touched, err
 			error={touched[id] && errors[id]}
 			helperText={touched[id] && errors[id]}
 			sx={{
-				width: { xs: "80%", sm: "100%" },
+				width: "100%",
 				"& .MuiInputBase-input": {
 					fontWeight: "300",
 				},

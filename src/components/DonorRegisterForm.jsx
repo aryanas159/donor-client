@@ -5,7 +5,7 @@ import AppMap from "./AppMap";
 import { useRef, useState } from "react";
 import { Stack, Button, Box } from "@mui/material";
 import axios from "axios";
-
+import { useMediaQuery } from "@mui/material";
 const DonorSchema = yup.object({
 	fullName: yup.string().required("Full name is required"),
 	age: yup
@@ -41,6 +41,7 @@ const initialValues = {
 };
 
 const DonorRegisterForm = ({ setSuccess, setFullName }) => {
+	const isMobile = useMediaQuery("(max-width: 600px)");
 	const mapRef = useRef(null);
 	let initial = {
 		latitude: 28.6448,
@@ -220,11 +221,11 @@ const DonorRegisterForm = ({ setSuccess, setFullName }) => {
 							errors={errors}
 						/>
 						<Box
-							width="35vw"
-							height="45vh"
+							width={isMobile ? "90vw" : "35vw"}
+							height={isMobile ? "60vh" : "45vw"}
 							display={"flex"}
 							gap={4}
-							p={3}
+							p={isMobile ? 2 : 3}
 							borderRadius={6}
 						>
 							<AppMap
