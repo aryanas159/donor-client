@@ -97,34 +97,34 @@ const DonorInfo = () => {
 			>
 				{donor && (
 					<>
-						<Typography variant="h5" fontWeight={300} color={"primary"}>
+						<Typography variant="h5" fontWeight={300} color={"primary"} fontSize={isMobile ? "1.2rem" : "1.5rem"}>
 							Name - <span style={{ color: "#fff" }}>{donor.fullName}</span>{" "}
 						</Typography>
-						<Typography variant="h5" fontWeight={300} color={"primary"}>
+						<Typography variant="h5" fontWeight={300} color={"primary"} fontSize={isMobile ? "1.2rem" : "1.5rem"}>
 							Age - <span style={{ color: "#fff" }}>{donor.age}</span>{" "}
 						</Typography>
-						<Typography variant="h5" fontWeight={300} color={"primary"}>
+						<Typography variant="h5" fontWeight={300} color={"primary"} fontSize={isMobile ? "1.2rem" : "1.5rem"}>
 							Blood Group -{" "}
 							<span style={{ color: "#fff" }}>{donor.bloodGroup}</span>{" "}
 						</Typography>
-						<Typography variant="h5" fontWeight={300} color={"primary"}>
+						<Typography variant="h5" fontWeight={300} color={"primary"} fontSize={isMobile ? "1.2rem" : "1.5rem"}>
 							Gender - <span style={{ color: "#fff" }}>{donor.gender}</span>{" "}
 						</Typography>
-						<Typography variant="h5" fontWeight={300} color={"primary"}>
+						<Typography variant="h5" fontWeight={300} color={"primary"} fontSize={isMobile ? "1.2rem" : "1.5rem"}>
 							Address - <span style={{ color: "#fff" }}>{donor.address}</span>{" "}
 						</Typography>
-						<Typography variant="h5" fontWeight={300} color={"primary"}>
+						<Typography variant="h5" fontWeight={300} color={"primary"} fontSize={isMobile ? "1.2rem" : "1.5rem"}>
 							Phone no. -{" "}
 							<span style={{ color: "#fff" }}>+91{donor.phoneNo}</span>{" "}
 						</Typography>
-						<Typography variant="h5" fontWeight={300} color={"primary"}>
+						<Typography variant="h5" fontWeight={300} color={"primary"} fontSize={isMobile ? "1.2rem" : "1.5rem"}>
 							Email - <span style={{ color: "#fff" }}>{donor.email}</span>{" "}
 						</Typography>
-						<Typography variant="h5" fontWeight={300} color={"primary"}>
+						<Typography variant="h5" fontWeight={300} color={"primary"} fontSize={isMobile ? "1.2rem" : "1.5rem"}>
 							Distance from your location -{" "}
 							<span style={{ color: "#fff" }}>{query.get("dist")} KM</span>{" "}
 						</Typography>
-						<Typography variant="h5" fontWeight={300} color={"primary"}>
+						<Typography variant="h5" fontWeight={300} color={"primary"} fontSize={isMobile ? "1.2rem" : "1.5rem"}>
 							Donor status -{" "}
 							<span style={{ color: "#fff" }}>
 								{donor.isDonating ? "Donating" : "Not donating"}
