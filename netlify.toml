@@ -2,3 +2,13 @@
 from = "/*"
 to = "index.html"
 status = 200
+
+[[redirects]]
+  from = "/locations.json"
+  to = "https://serpapi.com/"
+  status = 200
+
+[[redirects]]
+  from = "/search"
+  to = "https://serpapi.com/"
+  status = 200
