@@ -4,11 +4,11 @@ to = "index.html"
 status = 200
 
 [[redirects]]
-  from = "/locations.json"
-  to = "https://serpapi.com/"
+  from = "/locations.json/*"
+  to = "https://serpapi.com/locations.json/:splat"
   status = 200
 
 [[redirects]]
-  from = "/search"
-  to = "https://serpapi.com/"
+  from = "/search/*"
+  to = "https://serpapi.com/:splat"
   status = 200
