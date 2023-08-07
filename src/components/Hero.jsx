@@ -76,7 +76,7 @@ const Hero = () => {
 				/>
 			</Box>
 			{isMobile && (
-				<Box display="flex" flexDirection="column" gap={2} mt={4}>
+				<Box display="flex" flexDirection="column" gap={2} mt={4} mb={4}>
 					<Button
 						variant="contained"
 						onClick={() => {

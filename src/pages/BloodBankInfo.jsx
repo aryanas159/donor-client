@@ -5,13 +5,17 @@ import axios from "axios";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material";
+
 function useQuery() {
 	const { search } = useLocation();
+
 	return useMemo(() => new URLSearchParams(search), [search]);
 }
 
 const BloodBankInfo = () => {
 	const { placeId } = useParams();
+	const theme = useTheme();
 	let query = useQuery();
 	const [bloodBank, setBloodBank] = useState(null);
 	const getPlace = async () => {
@@ -102,86 +106,66 @@ const BloodBankInfo = () => {
 				display="flex"
 				flexDirection="column"
 				gap={2}
-				width="100%"
+				width="90%"
 				height="100%"
 				justifyContent="center"
+				alignItems="center"
 			>
 				{bloodBank && (
 					<>
-						<Typography variant={isMobile ? "h4" : "h3"} color="primary" align="center" p={2}>
+						<Typography variant={isMobile ? "h5" : "h3"} align="center" p={2}>
 							{bloodBank.title}
 						</Typography>
 						<Typography
 							variant="h5"
 							fontWeight={300}
-							color={"primary"}
-							fontSize={isMobile ? "1rem" : "1.3rem"}
+							fontSize={isMobile ? "1.2rem" : "1.3rem"}
+							align="center"
 						>
-							Address -{" "}
-							<span style={{ color: "#fff" }}>{bloodBank.address}</span>{" "}
+							<span>{bloodBank.address}</span>{" "}
 						</Typography>
-						<Typography
-							variant="h5"
-							fontWeight={300}
-							color={"primary"}
-							fontSize={isMobile ? "1.2rem" : "1.5rem"}
-						>
-							Current status -{" "}
-							<span style={{ color: "#fff" }}>{bloodBank.hours}</span>{" "}
-						</Typography>
-						<Typography
-							variant="h5"
-							fontWeight={300}
-							color={"primary"}
-							fontSize={isMobile ? "1.2rem" : "1.5rem"}
-						>
-							Phone no. -{" "}
-							<span style={{ color: "#fff" }}>{bloodBank.phone}</span>{" "}
-						</Typography>
-						<Typography
-							variant="h5"
-							fontWeight={300}
-							color={"primary"}
-							fontSize={isMobile ? "1.2rem" : "1.5rem"}
-						>
-							Distance from your location -{" "}
-							<span style={{ color: "#fff" }}>{query.get("dist")} KM</span>{" "}
-						</Typography>
-						{!!bloodBank?.links?.website && (
+						{bloodBank?.hours && (
 							<Typography
 								variant="h5"
 								fontWeight={300}
-								color={"primary"}
 								fontSize={isMobile ? "1.2rem" : "1.5rem"}
 							>
-								Website -{" "}
-								<a
-									href={bloodBank?.links?.website}
-									target="_blank"
-									style={{ color: "#fff", fontSize: "1.1rem" }}
-								>
-									{bloodBank?.links?.website}
-								</a>{" "}
+								<span>{bloodBank.hours}</span>{" "}
 							</Typography>
 						)}
-						{!!bloodBank?.links?.directions && (
-							<Typography
-								variant="h5"
-								fontWeight={300}
-								color={"primary"}
-								fontSize={isMobile ? "1.2rem" : "1.5rem"}
-							>
-								Directions -{" "}
-								<a
-									href={bloodBank?.links?.directions}
-									target="_blank"
-									style={{ color: "#fff", fontSize: "1.1rem" }}
+						<Typography
+							variant="h5"
+							fontWeight={300}
+							fontSize={isMobile ? "1.2rem" : "1.5rem"}
+						>
+							<span>{bloodBank.phone}</span>{" "}
+						</Typography>
+						<Typography
+							variant="h5"
+							fontWeight={300}
+							fontSize={isMobile ? "1.2rem" : "1.5rem"}
+						>
+							<span>{query.get("dist")} KM away</span>{" "}
+						</Typography>
+						<Box display="flex" gap={2}>
+							{!!bloodBank?.links?.website && (
+								<Button
+									variant="contained"
+									onClick={() => window.open(bloodBank?.links?.website)}
+									
 								>
-									{bloodBank?.links?.directions.length > 40 ? bloodBank?.links?.directions.slice(0, 40) + "..." : bloodBank?.links?.directions}
-								</a>{" "}
-							</Typography>
-						)}
-						
+									Website
+								</Button>
+							)}
+							{!!bloodBank?.links?.directions && (
+								<Button
+									variant="contained"
+									onClick={() => window.open(bloodBank?.links?.directions)}
+								>
+									Directions
+								</Button>
+							)}
+						</Box>
 					</>
 				)}
 			</Box>
