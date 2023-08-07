@@ -1,14 +1,14 @@
 [[redirects]]
-from = "/*"
-to = "index.html"
-status = 200
-
-[[redirects]]
   from = "/locations.json/*"
   to = "https://serpapi.com/locations.json/:splat"
   status = 200
 
 [[redirects]]
   from = "/search/*"
-  to = "https://serpapi.com/:splat"
+  to = "https://serpapi.com/search/:splat"
   status = 200
+
+  [[redirects]]
+from = "/*"
+to = "index.html"
+status = 200
