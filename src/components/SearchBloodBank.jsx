@@ -1,4 +1,11 @@
-import { TextField, Menu, Box, Typography, Stack } from "@mui/material";
+import {
+	TextField,
+	Menu,
+	Box,
+	Typography,
+	Stack,
+	CircularProgress,
+} from "@mui/material";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Collapse } from "@mui/material";
@@ -10,18 +17,21 @@ const SearchBloodBank = ({ myLocation, results, setResults }) => {
 	const [searchPlace, setSearchPlace] = useState("");
 	const [show, setShow] = useState(false);
 	const [searchResults, setSearchResults] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
 	const handlePlaceClick = async (location) => {
 		try {
 			if (myLocation) {
+				setIsLoading(true)
 				const res = await axios.get(
 					`${window.location.origin}/search?engine=google_local&api_key=${
 						import.meta.env.VITE_MAP_API
 					}&q=Blood+banks&location=${location}`
 				);
 				setResults(res?.data?.local_results);
-			}
-			else {
-				alert("Please mark your location")
+				setIsLoading(false)
+			} else {
+				setIsLoading(false)
+				alert("Please mark your location");
 			}
 		} catch (error) {
 			console.log(error);
@@ -56,17 +66,25 @@ const SearchBloodBank = ({ myLocation, results, setResults }) => {
 				>
 					Search for Blood banks
 				</Typography>
-				<TextField
-					size="small"
-					value={searchPlace}
-					placeholder="Enter your city..."
-					onChange={(e) => {
-						setSearchPlace(e.target.value);
-					}}
-					onFocus={() => setShow(true)}
-					onBlur={() => setShow(false)}
-				/>
-
+				<Box position="relative">
+					<TextField
+						size="small"
+						value={searchPlace}
+						placeholder="Enter your city..."
+						onChange={(e) => {
+							setSearchPlace(e.target.value);
+						}}
+						onFocus={() => setShow(true)}
+						onBlur={() => setShow(false)}
+						fullWidth
+					/>
+					{isLoading && (
+						<CircularProgress
+							size="1.5rem"
+							sx={{ position: "absolute", right: "10px", top: "8px" }}
+						/>
+					)}
+				</Box>
 				<Collapse in={show}>
 					<Box
 						position="absolute"

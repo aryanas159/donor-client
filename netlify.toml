@@ -8,7 +8,7 @@
   to = "https://serpapi.com/search/:splat"
   status = 200
 
-  [[redirects]]
+  [[redirects]]w
 from = "/*"
 to = "index.html"
 status = 200
