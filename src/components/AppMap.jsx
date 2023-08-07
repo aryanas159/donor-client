@@ -151,10 +151,10 @@ const AppMap = ({
 				{!!donors?.length &&
 					donors.map((donor) => (
 						<Marker
-							latitude={donor?.location?.latitude}
-							longitude={donor?.location?.longitude}
+							latitude={donor?.location ? donor?.location?.latitude : donor?.gps_coordinates?.latitude}
+							longitude={donor?.location ? donor?.location?.longitude : donor?.gps_coordinates?.longitude}
 						>
-							<img src={BloodDrop} height={60} />
+							<img src={BloodDrop} height={40} />
 						</Marker>
 					))}
 			</Map>
@@ -163,3 +163,7 @@ const AppMap = ({
 };
 
 export default AppMap;
+
+
+
+// donor?.gps_coordinates?.latitude

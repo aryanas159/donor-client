@@ -13,7 +13,7 @@ const UserCard = ({donorId, fullName, age, bloodGroup, distance, gender, isDonat
     }
     useEffect(formatBloodGroup, [bloodGroup])
     return (
-        <Box display="flex" gap={1} borderRadius={2} p={1} sx={{cursor: "pointer"}} onClick={() => navigate(`/${donorId}?dist=${Number(distance).toFixed(1)}`)}>
+        <Box display="flex" gap={1} borderRadius={2} p={1} sx={{cursor: "pointer"}} onClick={() => navigate(`/donor/${donorId}?dist=${Number(distance).toFixed(1)}`)}>
             <Avatar alt="donor" src={DonorIcon}/>
             <Stack>
                 <Typography variant="h5" fontSize={14}>{fullName}</Typography>

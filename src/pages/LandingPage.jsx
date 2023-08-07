@@ -1,13 +1,18 @@
 import AppMap from "../components/AppMap";
 import { useState, useRef } from "react";
-import { Box } from "@mui/material";
+import { Box, Switch, Avatar } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import axios from "axios";
 import SelectBloodType from "../components/SelectBloodType";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-
+import SearchBloodBank from "../components/SearchBloodBank";
+import DonorIcon from "../assets/donor.png";
+import BloodBankIcon from "../assets/blood-bank-icon.png";
+import { useTheme } from "@mui/material";
+import { alpha } from "@mui/material";
 const LandingPage = () => {
+	const theme = useTheme();
 	let initial = {
 		latitude: 28.6448,
 		longitude: 77.216721,
@@ -20,6 +25,8 @@ const LandingPage = () => {
 	const [bloodType, setBloodType] = useState(null);
 	const [results, setResults] = useState(null);
 	const [isLoading, setIsLoading] = useState(false);
+	const [isDonorSearch, setIsDonorSearch] = useState(true);
+
 	const mapRef = useRef();
 	const handleSearch = async () => {
 		try {
@@ -65,14 +72,47 @@ const LandingPage = () => {
 				mt={3}
 				backgroundColor={grey[900]}
 				borderRadius={6}
+				position="relative"
 			>
-				<SelectBloodType
-					handleSearch={handleSearch}
-					bloodType={bloodType}
-					setBloodType={setBloodType}
-					results={results}
-					isLoading={isLoading}
-				/>
+				<Box
+					p={theme.spacing(0, 1, 0, 1)}
+					borderRadius="30px"
+					sx={{
+						position: "absolute",
+						top: "-40px",
+						left: "0px",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						backgroundColor: alpha(theme.palette.primary.second, 0.3),
+					}}
+				>
+					<img src={BloodBankIcon} alt="bloodBank" height="25px" />
+					<Switch
+						checked={isDonorSearch}
+						onChange={() => {
+							setIsDonorSearch((prev) => !prev);
+							setResults(null)
+						}}
+					/>
+					<img src={DonorIcon} alt="bloodBank" height="25px" />
+				</Box>
+				{isDonorSearch ? (
+					<SelectBloodType
+						handleSearch={handleSearch}
+						bloodType={bloodType}
+						setBloodType={setBloodType}
+						results={results}
+						isLoading={isLoading}
+					/>
+				) : (
+					<SearchBloodBank
+						myLocation={newPlace}
+						results={results}
+						setResults={setResults}
+					/>
+				)}
+
 				<AppMap
 					mapRef={mapRef}
 					setNewPlace={setNewPlace}

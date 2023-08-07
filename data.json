@@ -1,0 +1,444 @@
+{
+    "search_metadata": {
+        "id": "64cfa7d8c7ad41eb47b7e3db",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/c0a3ea9c6461335a/64cfa7d8c7ad41eb47b7e3db.json",
+        "created_at": "2023-08-06 14:02:00 UTC",
+        "processed_at": "2023-08-06 14:02:00 UTC",
+        "google_local_url": "https://www.google.com/search?q=Blood+banks&uule=w+CAIQICIWSmFpcHVyLFJhamFzdGhhbixJbmRpYQ&hl=en&gl=us&tbm=lcl",
+        "raw_html_file": "https://serpapi.com/searches/c0a3ea9c6461335a/64cfa7d8c7ad41eb47b7e3db.html",
+        "total_time_taken": 1.39
+    },
+    "search_parameters": {
+        "engine": "google_local",
+        "q": "Blood banks",
+        "location_requested": "Jaipur,Rajasthan,India",
+        "location_used": "Jaipur,Rajasthan,India",
+        "google_domain": "google.com",
+        "hl": "en",
+        "gl": "us",
+        "device": "desktop"
+    },
+    "local_results": [
+        {
+            "position": 1,
+            "title": "PRATISHTHA BLOOD BANK",
+            "rating": 5,
+            "reviews_original": "(86)",
+            "reviews": 86,
+            "address": "Pratishtha Blood Bank, C-50, Jan Path",
+            "hours": "Open 24 hours",
+            "phone": "+91 141 410 9110",
+            "place_id": "2261812740620821674",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=2261812740620821674&q=Blood+banks",
+            "lsig": "AB86z5VQC1QZinLGPZZkEWEbVGC4",
+            "gps_coordinates": {
+                "latitude": 26.8885304,
+                "longitude": 75.8014865
+            },
+            "links": {
+                "website": "http://pratishthabloodbank.com/",
+                "directions": "https://www.google.com/maps/dir//PRATISHTHA+BLOOD+BANK,+Pratishtha+Blood+Bank,+C-50,+Jan+Path,+Satya+Vihar,+Indra+Puri,+Vidhayak+Nagar,+Lalkothi,+Jaipur,+Rajasthan+302015,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db5b2a16792ef:0x1f6392b4392824aa?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIBRAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 2,
+            "title": "Manav seva Blood Bank",
+            "rating": 5,
+            "reviews_original": "(7)",
+            "reviews": 7,
+            "address": "0-5-A Shankar Sadan, Adinath Marg, near Sawai Man Singh Hospital (SMS)",
+            "hours": "Open ⋅ Closes 12 AM",
+            "place_id": "6790953518979787215",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=6790953518979787215&q=Blood+banks",
+            "lsig": "AB86z5VqsRfzrd6qMOD_4Y3YhlSM",
+            "gps_coordinates": {
+                "latitude": 26.9058952,
+                "longitude": 75.81292189999999
+            },
+            "links": {
+                "directions": "https://www.google.com/maps/dir//Manav+seva+Blood+Bank,+0-5-A+Shankar+Sadan,+Adinath+Marg,+near+Sawai+Man+Singh+Hospital+(SMS),+Jaipur,+Rajasthan+302011,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db70de2f2e2cb:0x5e3e503ed8faa9cf?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIExAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 3,
+            "title": "GURUKUL BLOOD BANK",
+            "rating": 4.6,
+            "reviews_original": "(38)",
+            "reviews": 38,
+            "address": "236, Kali Das Marg, Near Space Cinema",
+            "hours": "Open 24 hours",
+            "phone": "+91 141 400 4484",
+            "place_id": "12349883240869159680",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=12349883240869159680&q=Blood+banks",
+            "lsig": "AB86z5WWPpGJqasyu3IpvZZ6iCEK",
+            "gps_coordinates": {
+                "latitude": 26.934044,
+                "longitude": 75.791881
+            },
+            "links": {
+                "website": "https://gurukulbloodbank.business.site/?utm_source=gmb&utm_medium=referral",
+                "directions": "https://www.google.com/maps/dir//GURUKUL+BLOOD+BANK,+236,+Kali+Das+Marg,+Near+Space+Cinema,+Sindhi+Colony,+Bani+Park,+Jaipur,+Rajasthan+302016,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db3c8d82a74c9:0xab639960058e6300?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQICBAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 4,
+            "title": "Blood Bank SMS",
+            "rating": 4.3,
+            "reviews_original": "(19)",
+            "reviews": 19,
+            "address": "WR48+6F3, sms hospital blood bank",
+            "hours": "Open 24 hours",
+            "place_id": "17644039924662563159",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=17644039924662563159&q=Blood+banks",
+            "lsig": "AB86z5X1n4Uo9SsS_Ae2HhdWJ88p",
+            "gps_coordinates": {
+                "latitude": 26.905505299999998,
+                "longitude": 75.8161673
+            },
+            "links": {
+                "directions": "https://www.google.com/maps/dir//WR48%2B6F3+Blood+Bank+SMS,+sms+hospital+blood+bank,+Jaipur,+Rajasthan,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db6a4f109f03f:0xf4dc38d450527157?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIEhAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 5,
+            "title": "Santokba Durlabhji Blood Bank",
+            "rating": 4.1,
+            "reviews_original": "(97)",
+            "reviews": 97,
+            "address": "5th Floor, SDMH OPD Block, Bhawani Singh Rd",
+            "hours": "Open 24 hours",
+            "phone": "+91 141 256 6251",
+            "place_id": "9299455043261197829",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=9299455043261197829&q=Blood+banks",
+            "lsig": "AB86z5W3UfdkKGAestsPJ0jy6rki",
+            "gps_coordinates": {
+                "latitude": 26.8944804,
+                "longitude": 75.81319069999999
+            },
+            "links": {
+                "directions": "https://www.google.com/maps/dir//Santokba+Durlabhji+Blood+Bank,+5th+Floor,+SDMH+OPD+Block,+Bhawani+Singh+Rd,+Rambagh,+Jaipur,+Rajasthan+302015,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db6992d16df8d:0x810e4d175a4c6e05?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIERAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 6,
+            "title": "Jaipuria Hospital Blood Bank",
+            "rating": 3,
+            "reviews_original": "(2)",
+            "reviews": 2,
+            "address": "Municipal Corporation",
+            "phone": "+91 141 255 2034",
+            "place_id": "2037270204555629477",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=2037270204555629477&q=Blood+banks",
+            "lsig": "AB86z5X5Y1anpi-PWmN317aeM3ZS",
+            "gps_coordinates": {
+                "latitude": 26.889815799999997,
+                "longitude": 75.8083563
+            },
+            "links": {
+                "directions": "https://www.google.com/maps/dir//Jaipuria+Hospital+Blood+Bank,+Municipal+Corporation,+Bapu+Nagar,+Jaipur,+Rajasthan+302018,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db69dbfffffff:0x1c45d675060693a5?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIEBAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 7,
+            "title": "Pink city blood center",
+            "rating": 4.9,
+            "reviews_original": "(18)",
+            "reviews": 18,
+            "address": "Pillar No. 16, Metro Station, A01, first floor, below Mansarovar",
+            "hours": "Open 24 hours",
+            "phone": "+91 141 294 8832",
+            "place_id": "15387886164724292274",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=15387886164724292274&q=Blood+banks",
+            "lsig": "AB86z5VXM2BnhJKfRjXtGjGl_icI",
+            "gps_coordinates": {
+                "latitude": 26.879597999999998,
+                "longitude": 75.7505084
+            },
+            "links": {
+                "website": "https://pink-city-blood-centre.business.site/",
+                "directions": "https://www.google.com/maps/dir//Pillar+No.+16,+Pink+city+blood+center,+Metro+Station,+A01,+first+floor,+below+Mansarovar,+Mansarovar,+Jaipur,+Rajasthan+302020,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db551f017b8dd:0xd58cc0f0348a1ab2?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIAhAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 8,
+            "title": "Jeevan Data Blood Bank",
+            "rating": 4.9,
+            "reviews_original": "(25)",
+            "reviews": 25,
+            "address": "2nd floor,Plot No. 33, Gopalpura Bypass Rd, near ridhi sidhi circal",
+            "hours": "Open 24 hours",
+            "place_id": "4065467926916156663",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=4065467926916156663&q=Blood+banks",
+            "lsig": "AB86z5U3YJ6wuMVzHwbtMbjJ8nWq",
+            "gps_coordinates": {
+                "latitude": 26.8722685,
+                "longitude": 75.77795909999999
+            },
+            "links": {
+                "website": "https://jeevandatabloodbank.business.site/?utm_source=gmb&utm_medium=referral",
+                "directions": "https://www.google.com/maps/dir//Jeevan+Data+Blood+Bank,+2nd+floor,Plot+No.+33,+Gopalpura+Bypass+Rd,+near+ridhi+sidhi+circal,+10-B+Scheme,+Jaipur,+Rajasthan+302018,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db51951e75fad:0x386b718a2d94ccf7?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIDxAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 9,
+            "title": "B.D. MEMORIAL BLOOD BANK( B.D.M.BLOOD BANK)",
+            "rating": 5,
+            "reviews_original": "(104)",
+            "reviews": 104,
+            "address": "भारत पेट्रोल पंप व तुलसी सेतु के स्टार्टिंग पॉइंट के पास, 1st floor, प्रथम मंजिल 4/ 98, अज्मेर सड़क, पुरानी चुंगी दरगाह के पास Near kalyan motors & Diamond Tower Ajmer road, अजमेर रोड",
+            "hours": "Open 24 hours",
+            "phone": "+91 141 678 0022",
+            "place_id": "15624471014674223314",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=15624471014674223314&q=Blood+banks",
+            "lsig": "AB86z5WIlfkVMeC1ev7WimbUkIMD",
+            "gps_coordinates": {
+                "latitude": 26.8983878,
+                "longitude": 75.7555695
+            },
+            "links": {
+                "website": "https://bd-memorial-blood-bank.business.site/?utm_source=gmb&utm_medium=referral",
+                "directions": "https://www.google.com/maps/dir//B.D.+MEMORIAL+BLOOD+BANK(+B.D.M.BLOOD+BANK),+%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4+%E0%A4%AA%E0%A5%87%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%8B%E0%A4%B2+%E0%A4%AA%E0%A4%82%E0%A4%AA+%E0%A4%B5+%E0%A4%A4%E0%A5%81%E0%A4%B2%E0%A4%B8%E0%A5%80+%E0%A4%B8%E0%A5%87%E0%A4%A4%E0%A5%81+%E0%A4%95%E0%A5%87+%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A4%BF%E0%A4%82%E0%A4%97+%E0%A4%AA%E0%A5%89%E0%A4%87%E0%A4%82%E0%A4%9F+%E0%A4%95%E0%A5%87+%E0%A4%AA%E0%A4%BE%E0%A4%B8,+1st+floor,+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A5%E0%A4%AE+%E0%A4%AE%E0%A4%82%E0%A4%9C%E0%A4%BF%E0%A4%B2+4%2F+98,+%E0%A4%85%E0%A4%9C%E0%A5%8D%E0%A4%AE%E0%A5%87%E0%A4%B0+%E0%A4%B8%E0%A4%A1%E0%A4%BC%E0%A4%95,+%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A8%E0%A5%80+%E0%A4%9A%E0%A5%81%E0%A4%82%E0%A4%97%E0%A5%80+%E0%A4%A6%E0%A4%B0%E0%A4%97%E0%A4%BE%E0%A4%B9+%E0%A4%95%E0%A5%87+%E0%A4%AA%E0%A4%BE%E0%A4%B8+Near+kalyan+motors+%26+Diamond+Tower+Ajmer+road,+%E0%A4%85%E0%A4%9C%E0%A4%AE%E0%A5%87%E0%A4%B0+%E0%A4%B0%E0%A5%8B%E0%A4%A1,+Jaipur,+Rajasthan+302021,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db5352298444d:0xd8d5459b190b50d2?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIDhAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 10,
+            "title": "S.K. Soni Blood Bank (a unit of SK Soni Charitable Trust)",
+            "rating": 4,
+            "reviews_original": "(17)",
+            "reviews": 17,
+            "address": "Gate number 2 soni hospital 38 kanota bhag, Jawahar Lal Nehru Marg",
+            "hours": "Open 24 hours",
+            "phone": "+91 76699 55502",
+            "place_id": "14729199054849722092",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=14729199054849722092&q=Blood+banks",
+            "lsig": "AB86z5UYaqJYEyg8TwxwzIbYUiRg",
+            "gps_coordinates": {
+                "latitude": 26.875608,
+                "longitude": 75.810138
+            },
+            "links": {
+                "website": "https://www.sonihospitals.com/s-k-soni-blood-bank/",
+                "directions": "https://www.google.com/maps/dir//S.K.+Soni+Blood+Bank+(a+unit+of+SK+Soni+Charitable+Trust),+Gate+number+2+soni+hospital+38+kanota+bhag,+Jawahar+Lal+Nehru+Marg,+Jaipur,+Rajasthan+302004,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db24de6477681:0xcc68a080725646ec?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIChAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 11,
+            "title": "Jan Kalyan Blood Bank",
+            "rating": 5,
+            "reviews_original": "(6)",
+            "reviews": 6,
+            "address": "Basement, 323, Dhruv Marg",
+            "hours": "Open 24 hours",
+            "phone": "+91 83067 64100",
+            "place_id": "10660434226753762606",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=10660434226753762606&q=Blood+banks",
+            "lsig": "AB86z5UoDwyeZt_RdBusEgse2v8Z",
+            "gps_coordinates": {
+                "latitude": 26.8957089,
+                "longitude": 75.8205327
+            },
+            "links": {
+                "directions": "https://www.google.com/maps/dir//Basement,+Jan+Kalyan+Blood+Bank,+323,+Dhruv+Marg,+Gurunanakpura,+Tilak+Nagar,+Jaipur,+Rajasthan+302004,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db715e03a36e1:0x93f17872a512f52e?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQICxAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 12,
+            "title": "Red Drop Blood Bank",
+            "rating": 5,
+            "reviews_original": "(24)",
+            "reviews": 24,
+            "address": "A-5 Hanuman Nagar A, Khatipura Rd",
+            "hours": "Open 24 hours",
+            "phone": "+91 96101 34111",
+            "place_id": "3251933718411592144",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=3251933718411592144&q=Blood+banks",
+            "lsig": "AB86z5VAsaXdcGNxlmiyp-bITGVJ",
+            "gps_coordinates": {
+                "latitude": 26.922414999999997,
+                "longitude": 75.74734959999999
+            },
+            "links": {
+                "website": "https://reddropbloodbankjaipur.business.site/?utm_source=gmb&utm_medium=referral",
+                "directions": "https://www.google.com/maps/dir//Red+Drop+Blood+Bank,+A-5+Hanuman+Nagar+A,+Khatipura+Rd,+Vaishali+Nagar,+Jaipur,+Rajasthan+302012,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db3d9d19408a9:0x2d21307cc709c1d0?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIDBAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 13,
+            "title": "Blood Bank",
+            "rating": 2.3,
+            "reviews_original": "(3)",
+            "reviews": 3,
+            "address": "WR47+WR4, third floor, trauma centre , Sms hospital Jaipur",
+            "hours": "Open 24 hours",
+            "place_id": "6215799003810217018",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=6215799003810217018&q=Blood+banks",
+            "lsig": "AB86z5UGl_KcDVg71xXZ8X_cW2NF",
+            "gps_coordinates": {
+                "latitude": 26.9072595,
+                "longitude": 75.81457499999999
+            },
+            "links": {
+                "directions": "https://www.google.com/maps/dir//WR47%2BWR4+Blood+Bank,+third+floor,+trauma+centre+,+Sms+hospital+Jaipur,+Jaipur,+Rajasthan,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db7ad393c318b:0x5642f442e155bc3a?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQICRAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 14,
+            "title": "S.S. BLOOD BANK",
+            "rating": 5,
+            "reviews_original": "(15)",
+            "reviews": 15,
+            "address": "244, Street Number 2, near Punjab National Bank",
+            "hours": "Open 24 hours",
+            "phone": "+91 141 260 8096",
+            "place_id": "18170515548618485627",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=18170515548618485627&q=Blood+banks",
+            "lsig": "AB86z5WMKY-SBV9S0KtNU4ym_wEH",
+            "gps_coordinates": {
+                "latitude": 26.898166699999997,
+                "longitude": 75.8303827
+            },
+            "links": {
+                "directions": "https://www.google.com/maps/dir//S.S.+BLOOD+BANK,+244,+Street+Number+2,+near+Punjab+National+Bank,+Frontier+Colony,+Adarsh+Nagar,+Jaipur,+Rajasthan+302004,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db7537456b83b:0xfc2aa39eb51def7b?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIAxAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 15,
+            "title": "JAIPUR JEEVANDATA",
+            "rating": 4.3,
+            "reviews_original": "(6)",
+            "reviews": 6,
+            "address": "241, Shyama Prasad Mukherji Marg",
+            "hours": "Open 24 hours",
+            "phone": "+91 97843 99183",
+            "place_id": "1179274482165064611",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=1179274482165064611&q=Blood+banks",
+            "lsig": "AB86z5VSRMQ9jxd04IA0JXgdgV_h",
+            "gps_coordinates": {
+                "latitude": 26.8953799,
+                "longitude": 75.8227686
+            },
+            "links": {
+                "website": "https://www.facebook.com/jaipurjjd/",
+                "directions": "https://www.google.com/maps/dir//JAIPUR+JEEVANDATA,+241,+Shyama+Prasad+Mukherji+Marg,+Gurunanakpura,+Tilak+Nagar,+Jaipur,+Rajasthan+302004,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db696f24d0a23:0x105d9fe4ba21a3a3?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIBBAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 16,
+            "title": "Government Mahila Chikitsalaya Blood Bank",
+            "rating": 5,
+            "reviews_original": "(2)",
+            "reviews": 2,
+            "address": "Municipal Corporation, Mirza Ismail Rd",
+            "phone": "+91 141 261 0542",
+            "place_id": "9308284573883775320",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=9308284573883775320&q=Blood+banks",
+            "lsig": "AB86z5WqgsJ7AVa8aZCDmENmWptK",
+            "gps_coordinates": {
+                "latitude": 26.9156528,
+                "longitude": 75.8108106
+            },
+            "links": {
+                "directions": "https://www.google.com/maps/dir//Government+Mahila+Chikitsalaya+Blood+Bank,+Municipal+Corporation,+Mirza+Ismail+Rd,+Fateh+Tibba,+Adarsh+Nagar,+Jaipur,+Rajasthan+302003,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db6ac76fab3ab:0x812dab80a6973958?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIDRAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 17,
+            "title": "Freedom blood bank",
+            "rating": 4.5,
+            "reviews_original": "(23)",
+            "reviews": 23,
+            "address": "Jaipur, Rajasthan, India",
+            "hours": "Open 24 hours",
+            "phone": "+91 96643 32173",
+            "place_id": "9880565811461553228",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=9880565811461553228&q=Blood+banks",
+            "lsig": "AB86z5W8XRCEHcB7YqZGfCrXhQDs",
+            "gps_coordinates": {
+                "latitude": 26.9595317,
+                "longitude": 75.772352
+            },
+            "links": {
+                "directions": "https://www.google.com/maps/dir//Freedom+blood+bank,+Vijay+Bari,+Vidyadhar+Nagar,+Jaipur,+Rajasthan+302032,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db3b27e0bbb6d:0x891ed2418c08fc4c?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIARAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 18,
+            "title": "Agarsen Blood Bank",
+            "rating": 4.8,
+            "reviews_original": "(12)",
+            "reviews": 12,
+            "address": "Maharaja Agrasen Hospital, Sector, Street Number 7",
+            "hours": "Closed ⋅ Opens 10 AM Mon",
+            "phone": "+91 141 233 5569",
+            "place_id": "4266456304081574128",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=4266456304081574128&q=Blood+banks",
+            "lsig": "AB86z5U7BH1e9PPY6D3b94I_uy8d",
+            "gps_coordinates": {
+                "latitude": 26.9664653,
+                "longitude": 75.7842971
+            },
+            "links": {
+                "directions": "https://www.google.com/maps/dir//Agarsen+Blood+Bank,+Maharaja+Agrasen+Hospital,+Sector,+Street+Number+7,+Vidyadhar+Nagar,+Jaipur,+Rajasthan+302023,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db3b400000001:0x3b357f67668218f0?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIBxAA&hl=en&gl=us"
+            }
+        },
+        {
+            "position": 19,
+            "title": "Metro Blood Bank",
+            "rating": 5,
+            "reviews_original": "(1)",
+            "reviews": 1,
+            "address": "Jaipur, Rajasthan, India",
+            "phone": "+91 141 666 1234",
+            "place_id": "1919386812331494171",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=1919386812331494171&q=Blood+banks",
+            "lsig": "AB86z5XP6hp6wFP-ak-___gcPXSx",
+            "gps_coordinates": {
+                "latitude": 26.8600311,
+                "longitude": 75.7705795
+            }
+        },
+        {
+            "position": 20,
+            "title": "Blood Centers Manipal Hospital Jaipur",
+            "rating": 4.7,
+            "reviews_original": "(30)",
+            "reviews": 30,
+            "address": "Main, Sikar Rd",
+            "hours": "Open 24 hours",
+            "phone": "+91 1800 102 4647",
+            "place_id": "10920372892566596054",
+            "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&ludocid=10920372892566596054&q=Blood+banks",
+            "lsig": "AB86z5VQYHrLOE9NqMw3fC_tI5Ep",
+            "gps_coordinates": {
+                "latitude": 26.9689722,
+                "longitude": 75.7732832
+            },
+            "links": {
+                "website": "https://www.manipalhospitals.com/jaipur/careers/blood-bank",
+                "directions": "https://www.google.com/maps/dir//Blood+Centers+Manipal+Hospital+Jaipur,+Main,+Sikar+Rd,+Sector+5,+Vidyadhar+Nagar,+Jaipur,+Rajasthan+302039,+India/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396db3a85abc4aa5:0x978cf549843ca9d6?sa=X&ved=2ahUKEwidg5yXmciAAxX8MlkFHVQZD8sQ48ADegQIBhAA&hl=en&gl=us"
+            }
+        }
+    ],
+    "pagination": {
+        "current": 1,
+        "next": "https://www.google.com/search?q=Blood+banks&hl=en&gl=us&start=20&tbm=lcl",
+        "other_pages": {
+            "2": "https://www.google.com/search?q=Blood+banks&hl=en&gl=us&start=20&tbm=lcl",
+            "3": "https://www.google.com/search?q=Blood+banks&hl=en&gl=us&start=40&tbm=lcl",
+            "4": "https://www.google.com/search?q=Blood+banks&hl=en&gl=us&start=60&tbm=lcl",
+            "5": "https://www.google.com/search?q=Blood+banks&hl=en&gl=us&start=80&tbm=lcl"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 1,
+        "next_link": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&q=Blood+banks&start=20",
+        "next": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&q=Blood+banks&start=20",
+        "other_pages": {
+            "2": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&q=Blood+banks&start=20",
+            "3": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&q=Blood+banks&start=40",
+            "4": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&q=Blood+banks&start=60",
+            "5": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&location=Jaipur%2CRajasthan%2CIndia&q=Blood+banks&start=80"
+        }
+    }
+}
