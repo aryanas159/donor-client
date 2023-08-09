@@ -53,11 +53,33 @@ const DonorRegisterForm = ({ setSuccess, setFullName }) => {
 	const [newPlace, setNewPlace] = useState(null);
 	const [viewport, setViewport] = useState(initial);
 	const [isLoading, setIsLoading] = useState(false);
+	const [otp, setOtp] = useState("");
+	const [otpHash, setOtpHash] = useState(null);
 	const [errMsg, setErrMsg] = useState("");
+
+	const generateOtp = async (values) => {
+		try {
+			setIsLoading(true);
+			const otpReq = await axios.post("/otp/generate", { email: values.email });
+			const { otpHash } = otpReq.data;
+			setOtpHash(otpHash);
+			setIsLoading(false);
+		} catch (error) {
+			alert("There was an error in generating OTP, please try again later.");
+			console.log(error);
+			setIsLoading(false);
+		}
+	};
 	const handleSubmit = async (values) => {
 		try {
 			if (!newPlace) {
-				return alert("Please enter a location")
+				return alert("Please enter a location");
+			}
+			const verifyOtp = await axios.post("/otp/verify", { otpHash, otp });
+			const { verified } = verifyOtp.data;
+			if (!verified) {
+				alert("Otp incorrect");
+				window.location.reload();
 			}
 			setIsLoading(true);
 			const location = {
@@ -78,7 +100,7 @@ const DonorRegisterForm = ({ setSuccess, setFullName }) => {
 
 	return (
 		<Formik
-			onSubmit={handleSubmit}
+			onSubmit={otpHash ? handleSubmit : generateOtp}
 			initialValues={initialValues}
 			validationSchema={DonorSchema}
 		>
@@ -238,6 +260,17 @@ const DonorRegisterForm = ({ setSuccess, setFullName }) => {
 						</Box>
 						<Box color="red">{errMsg}</Box>
 					</Stack>
+					{otpHash && (
+						<FormTextField
+							id="otp"
+							label="Enter OTP sent on email"
+							value={otp}
+							handleChange={(e) => setOtp(e.target.value)}
+							handleBlur={handleBlur}
+							touched={touched}
+							errors={errors}
+						/>
+					)}
 					<Button
 						type="submit"
 						variant="contained"
