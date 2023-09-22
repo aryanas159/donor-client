@@ -6,6 +6,7 @@ import axios from "axios";
 import SelectBloodType from "../components/SelectBloodType";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 import SearchBloodBank from "../components/SearchBloodBank";
 import DonorIcon from "../assets/donor.png";
 import BloodBankIcon from "../assets/blood-bank-icon.png";
@@ -123,6 +124,7 @@ const LandingPage = () => {
 					donors={results}
 				/>
 			</Box>
+			<Footer />
 		</Box>
 	);
 };

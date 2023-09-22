@@ -9,7 +9,7 @@ import axios from "axios";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../theme";
-
+import Footer from "./components/Footer";
 axios.defaults.baseURL = import.meta.env.VITE_AXIOS_URL;
 function App() {
 	return (

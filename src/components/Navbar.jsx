@@ -15,7 +15,7 @@ const Navbar = () => {
 					component="div"
 					sx={{ flexGrow: 1, ml: "8px" }}
 				>
-					DONOR
+					RED RELIEF
 				</Typography>
 				<Box display="flex" gap={2}>
 					{!isMobile && (
