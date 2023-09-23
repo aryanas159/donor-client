@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 
 const Person = ({ name, email }) => {
+    const isMobile = useMediaQuery("(max-width: 600px)")
 	return (
 		<Box>
 			<Typography fontSize={14}>{name}</Typography>
@@ -11,7 +12,7 @@ const Person = ({ name, email }) => {
 };
 function Footer() {
 	return (
-		<Box maxWidth="80vw" mt={8}>
+		<Box maxWidth={isMobile ? "100vw" : "80vw"} mt={8}>
 			<Typography variant="h4" color="primary">
 				Our Plan and Idea
 			</Typography>
