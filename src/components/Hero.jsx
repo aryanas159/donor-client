@@ -37,7 +37,7 @@ const Hero = () => {
 					1 DONATION CAN SAVE UPTO 3 LIVES
 				</Typography>
 			</Box>
-			<Box maxWidth="300px" position="absolute" left="100px">
+			<Box maxWidth="350px" position="absolute" left="100px">
 				<Typography
 					sx={{
 						color: "#fff",
@@ -45,9 +45,11 @@ const Hero = () => {
 						display: { xs: "none", md: "flex" },
 					}}
 				>
-					Our mission is to save lives and build a compassionate community of
-					blood donors. Whether you're here to register as a donor or searching
-					for donors in your area, you've come to the right place.
+					Red Relief, a healthcare startup, strives to eliminate deaths due to
+					blood supply shortages and improve the medical supply chain within the
+					country. Our grand vision extends to creating a global network for
+					essential medical resources. We serve as a vital link connecting
+					donors, individuals in need, cities, and states.
 				</Typography>
 			</Box>
 			<Box position="relative" width="50vw" height="60vh">
@@ -62,7 +64,6 @@ const Hero = () => {
 						bottom: "0%",
 					}}
 				/>
-
 				<img
 					src={personImage}
 					alt="docthor"
@@ -74,6 +75,30 @@ const Hero = () => {
 						bottom: "0%",
 					}}
 				/>
+			</Box>
+			<Box maxWidth="60%" p={2} mt={4}>
+				<Typography
+				textAlign={"center"}
+					sx={{
+						color: "#fff",
+						fontWeight: "300",
+						display: { xs: "none", md: "flex" },
+					}}
+				>
+					We function as a network bridging the gap between those in need and
+					blood donors, connecting people, cities, and states. We are building
+					an extensive network with hospitals, blood banks, and NGOs while
+					developing a comprehensive database to record, update, and display
+					information about the availability and expiration of blood supplies,
+					all through a real-time-based system. Our goal is to help hundreds of
+					people access essential supplies in time to save the lives of their
+					loved ones. We are also dedicated to raising awareness about blood
+					donation by conducting social-level campaigns and expanding our reach
+					to even the most remote parts of the country, providing them with
+					access to this life-saving elixir. We encourage individuals to join
+					this movement of spreading peace and love, making the world a better
+					place to live.
+				</Typography>
 			</Box>
 			{isMobile && (
 				<Box display="flex" flexDirection="column" gap={2} mt={4} mb={4}>
