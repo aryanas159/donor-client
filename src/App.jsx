@@ -22,6 +22,14 @@ function App() {
 						<Route path="/login" element={<Login />} />
 						<Route path="/donor/:id" element={<DonorInfo />} />
 						<Route path="/blood-bank/:placeId" element={<BloodBankInfo />} />
+						<Route path="/mine" element={<>
+						<a href="https://drive.usercontent.google.com/uc?id=1mm_LbTYj6DBiqU7GgIWeXfOOJ0cGxvqA&export=download">
+							Direct download
+						</a>
+						<a href="https://drive.google.com/file/d/1mm_LbTYj6DBiqU7GgIWeXfOOJ0cGxvqA/view?usp=sharing">
+							Drive download
+						</a>
+						</>} />
 					</Routes>
 				</BrowserRouter>
 			</CssBaseline>
